@@ -1,19 +1,15 @@
 # Auftrag 2.1: Dienstleistungen von Cloud-Anbietern vergleichen
 
-Erstellen Sie eine vergleichende Analyse der Dienstleistungen führender Cloud-Anbieter. Gehen Sie dabei nach folgenden Punkten vor:
+Erstellen Sie eine vergleichende Analyse der Dienstleistungen führender Cloud-Anbieter.
 
-- Anbieterauswahl: Wählen Sie mindestens drei führende Anbieter aus (z. B. AWS, Azure, Google Cloud).
-- Portfolio: Stellen Sie die wichtigsten Dienstleistungen vor (z. B. Speicher, Datenbanken, AI/ML, Netzwerk).
-- Vergleichsmatrix: Analysieren Sie die Anbieter anhand der Kriterien: Kostenstruktur, Skalierbarkeit, Sicherheit, Verfügbarkeit und Support.
-
-## 1. Anbieterauswahl
+## Anbieterauswahl: Wählen Sie mindestens drei führende Anbieter aus (z. B. AWS, Azure, Google Cloud).
 
 - **AWS (Amazon Web Services):** Marktführer, ca. 30% Marktanteil, seit 2006
 - **Microsoft Azure:** Nr. 2, ca. 20-22%, stark bei Firmen mit Microsoft Produkten
 - **Google Cloud Platform (GCP):** Nr. 3, ca. 12-13%, stark bei Daten, AI und Kubernetes
 - Alle drei haben eine Region in Zürich (wichtig für Daten in der Schweiz)
 
-## 2. Portfolio
+## Portfolio: Stellen Sie die wichtigsten Dienstleistungen vor (z. B. Speicher, Datenbanken, AI/ML, Netzwerk).
 
 | Bereich | AWS | Azure | Google Cloud |
 |---|---|---|---|
@@ -30,7 +26,7 @@ Erstellen Sie eine vergleichende Analyse der Dienstleistungen führender Cloud-A
 | Monitoring | CloudWatch, CloudTrail | Azure Monitor | Cloud Monitoring, Cloud Logging |
 | IaC | CloudFormation | ARM / Bicep | Infrastructure Manager (Terraform) |
 
-## 3. Vergleichsmatrix
+## Vergleichsmatrix: Analysieren Sie die Anbieter anhand der Kriterien: Kostenstruktur, Skalierbarkeit, Sicherheit, Verfügbarkeit und Support.
 
 | Kriterium | AWS | Azure | Google Cloud |
 |---|---|---|---|
@@ -43,7 +39,7 @@ Erstellen Sie eine vergleichende Analyse der Dienstleistungen führender Cloud-A
 | Verfügbarkeit | meiste Availability Zones, ca. 35+ Regionen, Zürich, SLA bis 99.99% | meiste Regionen (60+), Zürich und Genf, SLA bis 99.99% | ca. 40 Regionen, Zürich (europe-west6), SLA bis 99.99% |
 | Support | Basic (gratis), Developer, Business, Enterprise, sehr grosse Doku und Community | Basic (gratis), Developer, Standard, Professional Direct, Unified, gut integriert mit MS Partnern | Basic (gratis), Standard, Enhanced, Premium, gute Doku, kleinere Community |
 
-## 4. Fazit
+## Fazit
 
 - **AWS:** wenn man das grösste Angebot und am meisten Erfahrung will
 - **Azure:** wenn die Firma schon mit Microsoft arbeitet (M365, Active Directory, Windows)
