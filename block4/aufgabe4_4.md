@@ -28,8 +28,8 @@ echo 'source <(minikube completion bash)' >>~/.bashrc
 ## kubectl installieren
 
 ```bash
-version=$(curl -sL https://dl.k8s.io/release/stable.txt)
-sudo curl -Lo /usr/local/bin/kubectl https://dl.k8s.io/release/$version/bin/linux/amd64/kubectl
+kver=$(curl -fsSL https://dl.k8s.io/release/stable.txt)
+sudo curl -fLo /usr/local/bin/kubectl https://dl.k8s.io/release/$kver/bin/linux/amd64/kubectl
 sudo chmod +x /usr/local/bin/kubectl
 echo 'source <(kubectl completion bash)' >>~/.bashrc
 echo 'alias k=kubectl' >>~/.bashrc
