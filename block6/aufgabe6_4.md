@@ -119,6 +119,23 @@ oc delete pods -l deploymentconfig=appuio-php-docker    # Terminal 2
 - Der ReplicationController merkt, dass weniger Pods laufen als gewünscht und startet neue
 - Die neuen Pods sind erst `1/1`, wenn die Readiness Probe OK meldet
 
+## DeploymentConfig vs. Deployment
+
+```
+Deployment (6.3)          -> ReplicaSet             -> Pod  web-app-7676f98c7f-nkl97
+DeploymentConfig (Labs)   -> ReplicationController  -> Pod  appuio-php-docker-1-2uc89
+```
+
+| Kubernetes Standard | Nur OpenShift (veraltet) |
+|---------------------|--------------------------|
+| Deployment | DeploymentConfig |
+| ReplicaSet | ReplicationController |
+| Pod-Name mit Hash | Pod-Name mit Revisionsnummer |
+
+- Deployment / DeploymentConfig: Plan (Image, Anzahl, Update-Strategie)
+- ReplicaSet / ReplicationController: zählt die Pods und startet neue, wenn welche fehlen
+- Bei einem Update wird ein neuer ReplicaSet bzw. ReplicationController erstellt, der alte bleibt mit 0 Pods für einen Rollback
+
 ## Erkenntnisse
 
 - `oc new-app` ist schnell zum Ausprobieren, aber die Konfiguration existiert dann nur im Cluster. Mit YAML-Dateien im Git (wie in 6.3) kann man alles jederzeit wieder aufbauen
