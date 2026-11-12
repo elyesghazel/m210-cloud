@@ -1,0 +1,22 @@
+kind: Deployment
+apiVersion: apps/v1
+metadata:
+  name: web-app
+  labels:
+    app: web-app
+    app.kubernetes.io/part-of: web-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: web-app
+  template:
+    metadata:
+      labels:
+        app: web-app
+    spec:
+      containers:
+        - name: web-app
+          image: ghcr.io/elyesghazel/html-openshift-app:v1
+          resources: {}
+          imagePullPolicy: Always

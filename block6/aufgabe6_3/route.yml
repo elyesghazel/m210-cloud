@@ -1,0 +1,16 @@
+kind: Route
+apiVersion: route.openshift.io/v1
+metadata:
+  name: web-app-route
+  labels:
+    app: web-app
+    app.kubernetes.io/part-of: web-app
+spec:
+  to:
+    kind: Service
+    name: web-app-svc
+  port:
+    targetPort: web-app-tcp-8080
+  tls:
+    termination: edge
+    insecureEdgeTerminationPolicy: Redirect
