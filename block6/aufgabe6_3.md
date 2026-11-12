@@ -99,9 +99,16 @@ oc get routes
 
 | Fehler | Ursache |
 |--------|---------|
-| `ImagePullBackOff` | Image-Name falsch, Image nicht gepusht oder Secret `ghcr` fehlt bzw. ist nicht verknüpft |
+| `ErrImagePull` / `ImagePullBackOff` | Image-Name falsch, Image nicht gepusht oder Secret `ghcr` fehlt bzw. ist nicht verknüpft |
 | `CrashLoopBackOff` | Normales `nginx` statt `nginx-unprivileged` verwendet |
 | Route zeigt "Application is not available" | Pod läuft nicht oder Port im Service stimmt nicht |
+
+Bei mir kam zuerst `ErrImagePull`, weil das Secret `ghcr` nicht mit dem Service Account verknüpft war. Lösung:
+
+```bash
+oc secrets link default ghcr --for=pull
+oc rollout restart deployment/web-app
+```
 
 ## Update der Seite (manuell)
 
